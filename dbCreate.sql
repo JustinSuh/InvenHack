@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS inventory;
 
-CREATE DATAVASE inventory;
+CREATE DATABASE inventory;
 
 USE inventory;
 
