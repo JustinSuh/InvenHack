@@ -22,7 +22,7 @@ return [
             'password' => '',
             'host' => 'localhost',
             'dbname' => 'inventory',
-            'db' => 'mysql',
+            'db' => 'mysql'
         ],
     ],
 ];
