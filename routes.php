@@ -152,7 +152,7 @@ $app->get('/inventory/{inv_id}',
         $db = $this->user;
 
         $query = $db->prepare(
-        	'SELECT *
+        	'SELECT inv_pic
         		FROM Inven 
         		WHERE inv_id = :inv_id'
 			)
@@ -163,8 +163,8 @@ $app->get('/inventory/{inv_id}',
                 )
             );
 
-        foreach($db->query('SELECT * FROM Inven WHERE inv_id = :inv_id) as $row') {
-            printf('<img src = "%s" /<br/>', $row['url']);
+        foreach($db->query('SELECT inv_pic FROM Inven WHERE inv_id = :inv_id) as $row') {
+            printf('<img src = "%s" /<br/>', $row['inv_pic']);
 
 		return;
     } 
@@ -177,12 +177,12 @@ $app->post('/addNewInventory',
 	function ($request, $response, $args) {
         $db = $this->user;
         $parms = $request->getParsedBody();
-        $uid = $parms['inv_id'];
-        $aid = $parms['inv_pic'];
+        $iid = $parms['inv_id'];
+        $ipid = $parms['inv_pic'];
         $query = $db->prepare("INSERT INTO Inven (inv_name, inv_pic)
-                    VALUES ($uid, $aid)");
-        $query->bindParam(':inv', $uid);
-        $query->bindParam(':inv_pic', $aid);
+                    VALUES ($iid, $ipid)");
+        $query->bindParam(':inv', $iid);
+        $query->bindParam(':inv_pic', $ipid);
         $query->execute();
 });
 
@@ -191,11 +191,10 @@ $app->delete('/deleteInven{inv_id}',
         $db = $this->user;
         $parms = $request->getParsedBody();
         $uid = $parms['inv_id'];
-        $query = $db->prepare("DELETE * FROM Inven
+        $query = $db->prepare("DELETE FROM Inven
                     WHERE  inv_id = :inv_id");
         $query->bindParam(':inv', $uid);
         $query->execute();
 });
-
 
 ?>
