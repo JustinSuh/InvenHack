@@ -15,10 +15,10 @@ CREATE TABLE User (
 );
 
 CREATE TABLE Inven (
-    inv_id int NOT NULL AUTO_INCREMENT,
-    inv_name varchar(25) NOT NULL,
-    inv_pic varchar(250) NOT NULL,
-    CONSTRAINT Inven_pk PRIMARY KEY (inv_id)
+	inv_id int NOT NULL AUTO_INCREMENT,
+	inv_name varchar(25) NOT NULL,
+	inv_pic varchar(250) NOT NULL,
+	CONSTRAINT Inven_pk PRIMARY KEY (inv_id)
 );
 
 insert into User (user_id, username, password, salt, email, sex) values (1, 'Michael', 'sjA0FyAt', 'lC40Pu5', 'mjacobs0@omniture.com', 'Male');
