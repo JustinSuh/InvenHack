@@ -1,2 +1,2 @@
-# InvenHack
-Slim code for Hackathon inventory holder
+# Anegrid
+Inventory for files for Anegrid
