@@ -25,20 +25,10 @@ insert into User (user_id, username, password, salt, email, sex) values (1, 'Mic
 insert into User (user_id, username, password, salt, email, sex) values (2, 'Timothy', 'WZiWYx', 'zHK2u2M', 'twilliamson1@google.cn', 'Male');
 insert into User (user_id, username, password, salt, email, sex) values (3, 'Helen', '6SnATZJ5', 'EDKlPJrVAoG0', 'hcarpenter2@blogger.com', 'Female');
 insert into User (user_id, username, password, salt, email, sex) values (4, 'Russell', 'KiLCn2RP', 'pKDGOsutR2', 'rcarr3@marriott.com', 'Male');
-insert into User (user_id, username, password, salt, email, sex) values (5, 'Harry', 'ABbpQQH', 'bExnpzAgcb2Y', 'hthomas4@unesco.org', 'Male');
-insert into User (user_id, username, password, salt, email, sex) values (6, 'Philip', 'aPOcLJfGAuXJ', 'bjS7aj', 'proberts5@google.com', 'Male');
-insert into User (user_id, username, password, salt, email, sex) values (7, 'Emily', 'rB6EHq', 'gstelsnEo', 'ecastillo6@desdev.cn', 'Female');
-insert into User (user_id, username, password, salt, email, sex) values (8, 'Kathy', 'zmtFoUu', 'VnxuEp', 'kwright7@stumbleupon.com', 'Female');
-insert into User (user_id, username, password, salt, email, sex) values (9, 'Nicole', 'D3oscMmDA', 'J9y7qZ4yJ', 'nortiz8@moonfruit.com', 'Female');
-insert into User (user_id, username, password, salt, email, sex) values (10, 'Norma', '0jg04HVadB', 'Xww5b98SeSC1', 'ncole9@t-online.de', 'Female');
+insert into User (user_id, username, password, salt, email, sex) values (5, 'Harry', 'ABbpQQH', 'bExnpzAcgb2Y', 'hthomas4@unesco.org', 'Male');
 
-insert into Inven (inv_id, inv_name, inv_pic) values (1, 'imperdiet et', 'http://dummyimage.com/179x199.jpg/ff4444/ffffff');
-insert into Inven (inv_id, inv_name, inv_pic) values (2, 'tortor quis', 'http://dummyimage.com/130x197.jpg/ff4444/ffffff');
-insert into Inven (inv_id, inv_name, inv_pic) values (3, 'nulla suspendisse potenti', 'http://dummyimage.com/235x116.jpg/5fa2dd/ffffff');
-insert into Inven (inv_id, inv_name, inv_pic) values (4, 'a feugiat et', 'http://dummyimage.com/212x238.jpg/ff4444/ffffff');
-insert into Inven (inv_id, inv_name, inv_pic) values (5, 'sit amet nulla', 'http://dummyimage.com/238x249.jpg/ff4444/ffffff');
-insert into Inven (inv_id, inv_name, inv_pic) values (6, 'luctus', 'http://dummyimage.com/165x197.jpg/ff4444/ffffff');
-insert into Inven (inv_id, inv_name, inv_pic) values (7, 'pede', 'http://dummyimage.com/109x203.jpg/cc0000/ffffff');
-insert into Inven (inv_id, inv_name, inv_pic) values (8, 'tristique est et', 'http://dummyimage.com/248x117.jpg/cc0000/ffffff');
-insert into Inven (inv_id, inv_name, inv_pic) values (9, 'odio', 'http://dummyimage.com/173x112.jpg/cc0000/ffffff');
-insert into Inven (inv_id, inv_name, inv_pic) values (10, 'quisque', 'http://dummyimage.com/246x178.jpg/dddddd/000000');
+insert into Inven (inv_id, inv_name, inv_pic) values (1, 'TV', 'http://eventsbyfabulous.com/wp-content/uploads/2013/09/samsung-tv-front.jpg');
+insert into Inven (inv_id, inv_name, inv_pic) values (2, 'Microwave', 'http://i5.walmartimages.com/dfw/dce07b8c-bfb2/k2-_5684ebd2-1e98-4786-8f9b-afac9552e51a.v1.jpg');
+insert into Inven (inv_id, inv_name, inv_pic) values (3, 'Couch', 'http://ak1.ostkcdn.com/images/products/P13318481L.jpg');
+insert into Inven (inv_id, inv_name, inv_pic) values (4, 'Dog', 'http://g-ecx.images-amazon.com/images/G/01/img15/pet-products/small-tiles/23695_pets_vertical_store_dogs_small_tile_8._CB312176604_.jpg');
+insert into Inven (inv_id, inv_name, inv_pic) values (5, 'Rock', 'http://www.bryanrock.com/application/files/7914/3349/4593/rock.png');
