@@ -236,7 +236,7 @@ $app->get('/inventory6/{inv_id}',
 });
 
 $app->post('/addNewInventory',
-	function ($request, $response, $args) {
+    function ($request, $response, $args) {
         $db = $this->user;
         $parms = $request->getParsedBody();
         $iid = $parms['inv_id'];
@@ -249,7 +249,7 @@ $app->post('/addNewInventory',
 });
 
 $app->delete('/deleteInven{inv_id}',
-	function ($request, $response, $args) {
+    function ($request, $response, $args) {
         $db = $this->user;
         $parms = $request->getParsedBody();
         $uid = $parms['inv_id'];
@@ -258,6 +258,5 @@ $app->delete('/deleteInven{inv_id}',
         $query->bindParam(':inv', $uid);
         $query->execute();
 });
-
 
 ?>
