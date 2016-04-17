@@ -2,6 +2,7 @@
 
 header('Access-Control-Allow-Origin: *');  
 
+
 return [
     'settings' => [
         'displayErrorDetails' => true, // set to false in production
@@ -22,7 +23,7 @@ return [
             'password' => '',
             'host' => 'localhost',
             'dbname' => 'inventory',
-            'db' => 'mysql'
+            'db' => 'mysql',
         ],
     ],
 ];
