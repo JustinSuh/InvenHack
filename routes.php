@@ -146,31 +146,94 @@ $app->get('/inventory',
     }
 });
 
-$app->get('/inventory/{inv_id}',
-	function ($request, $response, $args) {
-    try {
+$app->get('/inventory1/{inv_id}',
+    function ($request, $response, $args) {
+        
         $db = $this->user;
 
-        $query = $db->prepare(
-        	'SELECT inv_pic
-        		FROM Inven 
-        		WHERE inv_id = :inv_id'
-			)
+        $var = $args['inv_id'];
 
-        $query->execute(
-        	array(
-                'inv_id' => $args['inv_id']
-                )
-            );
-
-        foreach($db->query('SELECT inv_pic FROM Inven WHERE inv_id = :inv_id) as $row') {
+        foreach($db->query('SELECT inv_pic FROM Inven WHERE inv_id = 1') as $row) {
             printf('<img src = "%s" /<br/>', $row['inv_pic']);
 
-		return;
-    } 
-    catch(PDOException $e) {
-        echo '{"error":{"text":'. $e->getMessage() .'}}';
-    }
+    };
+
+        return;
+});
+
+$app->get('/inventory2/{inv_id}',
+    function ($request, $response, $args) {
+        
+        $db = $this->user;
+
+        $var = $args['inv_id'];
+
+        foreach($db->query('SELECT inv_pic FROM Inven WHERE inv_id = 2') as $row) {
+            printf('<img src = "%s" /<br/>', $row['inv_pic']);
+
+    };
+
+        return;
+});
+
+$app->get('/inventory3/{inv_id}',
+    function ($request, $response, $args) {
+        
+        $db = $this->user;
+
+        $var = $args['inv_id'];
+
+        foreach($db->query('SELECT inv_pic FROM Inven WHERE inv_id = 3') as $row) {
+            printf('<img src = "%s" /<br/>', $row['inv_pic']);
+
+    };
+
+        return;
+});
+
+$app->get('/inventory4/{inv_id}',
+    function ($request, $response, $args) {
+        
+        $db = $this->user;
+
+        $var = $args['inv_id'];
+
+        foreach($db->query('SELECT inv_pic FROM Inven WHERE inv_id = 4') as $row) {
+            printf('<img src = "%s" /<br/>', $row['inv_pic']);
+
+    };
+
+        return;
+});
+
+$app->get('/inventory5/{inv_id}',
+    function ($request, $response, $args) {
+        
+        $db = $this->user;
+
+        $var = $args['inv_id'];
+
+        foreach($db->query('SELECT inv_pic FROM Inven WHERE inv_id = 5') as $row) {
+            printf('<img src = "%s" /<br/>', $row['inv_pic']);
+
+    };
+
+        return;
+});
+
+$app->get('/inventory6/{inv_id}',
+    function ($request, $response, $args) {
+        
+        $db = $this->user;
+
+        $var = $args['inv_id'];
+
+        foreach($db->query('SELECT inv_pic FROM Inven WHERE inv_id = 6') as $row) {
+            printf('<img src = "%s" /<br/>', $row['inv_pic']);
+
+    };
+
+        return;
 });
 
 $app->post('/addNewInventory',
@@ -196,5 +259,6 @@ $app->delete('/deleteInven{inv_id}',
         $query->bindParam(':inv', $uid);
         $query->execute();
 });
+
 
 ?>
