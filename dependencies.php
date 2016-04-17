@@ -1,6 +1,4 @@
 <?php
-
-header('Access-Control-Allow-Origin: *');  
 // DIC configuration
 
 $container = $app->getContainer();
@@ -20,6 +18,38 @@ $container['logger'] = function ($c) {
     return $logger;
 };
 
+$container['dbConn'] = function ($c) {
+	$settings = $c->get('settings')['dbConn'];
+
+	$connString = $settings['db'] . ':host=' . $settings['host'];
+	$connString .= ';dbname=' . $settings['dbname'] . ';charset=utf8mb4';
+
+	$db = new PDO($connString, $settings['username'], $settings['password']);
+
+	return $db;
+};
+
+$container['testImage'] = function ($c) {
+    $settings = $c->get('settings')['testImage'];
+
+    $connString = $settings['db'] . ':host=' . $settings['host'];
+    $connString .= ';dbname=' . $settings['dbname'] . ';charset=utf8mb4';
+
+    $db = new PDO($connString, $settings['username'], $settings['password']);
+
+    return $db;
+};
+
+$container['login_dbConn'] = function ($c) { 
+    $settings = $c->get('settings')['login_dbConn']; 
+
+    $connString = $settings['db'] . ':host=' . $settings['host']; 
+    $connString .= ';dbname=' . $settings['dbname'] . ';charset=utf8mb4'; 
+
+    $db = new PDO($connString, $settings['username'], $settings['password']); 
+
+    return $db; 
+};
 
 $container['user'] = function ($c) { 
     $settings = $c->get('settings')['user']; 
@@ -28,3 +58,18 @@ $container['user'] = function ($c) {
     $db = new PDO($connString, $settings['username'], $settings['password']); 
     return $db; 
 };
+
+//***********************************************************************************
+
+$container['api_login'] = function ($c) { 
+    $settings = $c->get('settings')['api_login']; 
+
+    $connString = $settings['db'] . ':host=' . $settings['host']; 
+    $connString .= ';dbname=' . $settings['dbname'] . ';charset=utf8mb4'; 
+
+    $db = new PDO($connString, $settings['username'], $settings['password']); 
+
+    return $db; 
+};
+
+
