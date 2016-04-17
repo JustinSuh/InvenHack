@@ -120,11 +120,10 @@ $app->post('/login', function ($request, $response, $args) {
 });
 
 $app->get('/inventory',
-	function ($request, $response, $args) {
+    function ($request, $response, $args) {
     try {
         $db = $this->user;
  
-        //FIX SQL STATEMENT FOR NEWLY UPDATED DB
         $query = $db->prepare(
             'SELECT inv_id, inv_name 
                 FROM Inven;');
